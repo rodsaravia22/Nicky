@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Estilo de saludos */
+.greetings {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+    10%, 90% {
+        color: #222;
+        text-shadow: none;
+    }
+}
+
+.greetings > span:nth-child(2) { animation-delay: 0.2s; }
+.greetings > span:nth-child(3) { animation-delay: 0.4s; }
+.greetings > span:nth-child(4) { animation-delay: 0.6s; }
+.greetings > span:nth-child(5) { animation-delay: 0.8s; }
+.greetings > span:nth-child(6) { animation-delay: 1s; }
+
+/* Descripción */
+.description {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    color: #b0e0e6;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botones a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #0a2be9, #1e90ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(10, 43, 233, 0.5);
+    transition: all 0.3s ease;
+}
+
+.botones a:hover {
+    background: linear-gradient(145deg, #32c2c2, #39c6d6);
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.botones a:focus {
+    outline: none;
+    background-color: #39c6d6;
+    box-shadow: 0 0 10px #39c6d6, 0 0 40px #39c6d6;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .greetings {
+        font-size: 4rem;
+    }
+    .description {
+        font-size: 1.2rem;
+    }
+    .botones a {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e6f0ff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #cce0ff, #e6f0ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flowers {
+  width: 100%;
+  height: 100%;
+  background: url("img/flowers-blue.png") no-repeat center center;
+  background-size: contain;
+  opacity: 0.9;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 0.9; transform: scale(1); }
+}
